@@ -1,3 +1,5 @@
+title: Android-Studio-Tips
+---
 >收集网上看到，或者自己总结的tips，未完待续，持续更新 
 文中所提到的快捷键无特殊说明均为windows环境下，如果遇到快捷键无效，检查是否被占用，或者设置中，keymap相关键位是否设置
 [兄弟篇 - android 开发tips - sdk api](http://www.jianshu.com/p/adfa519756b1)

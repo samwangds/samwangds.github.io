@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-SourceTree-证书" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/26/SourceTree-证书/" class="article-date">
+  <time datetime="2016-02-26T13:58:08.119Z" itemprop="datePublished">2016-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://my.atlassian.com/license/sourcetree" target="_blank" rel="external">官方地址：atlassian -license</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1181400-d3a904a72a010fc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点击红框下载证书"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/26/SourceTree-证书/" data-id="cil3uh38c000aacewa59ythbn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Fragment的使用笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/26/Fragment的使用笔记/" class="article-date">
+  <time datetime="2016-02-26T13:58:08.117Z" itemprop="datePublished">2016-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>使用v4包里的Fragment与android.app.Fragment的差别在于：</p>
+<ol>
+<li>v4包的兼容支持3.0以下版本</li>
+<li>v4包的Activity必须继承自<code>android.support.v4.app.FragmentActivity</code></li>
+</ol>
+<ul>
+<li>必须使用<code>FragmentActivity.getSupportFragmentManager</code>获取FragmentManager，framework里的Fragment则使用<code>Activity.getFragmentManager</code>即可</li>
+</ul>
+</blockquote>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="1-最简单的用法，使用Android-studio-新建一个Activity-使用Fragment作为内容"><a href="#1-最简单的用法，使用Android-studio-新建一个Activity-使用Fragment作为内容" class="headerlink" title="1. 最简单的用法，使用Android studio 新建一个Activity 使用Fragment作为内容"></a>1. 最简单的用法，使用Android studio 新建一个Activity 使用Fragment作为内容</h3><p><img src="http://upload-images.jianshu.io/upload_images/1181400-685327ea4308300c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>这个时候就会自动生成<fragment>标签，像View一样的使用，其中<code>android:name</code>设置为我们的Fragment类所在路径。<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;fragment android:<span class="property">id</span>=<span class="string">"@+id/fragment"</span></span><br><span class="line">          android:<span class="property">name</span>=<span class="string">"pagename.FragmentName"</span></span><br><span class="line">          android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">          android:layout_height=<span class="string">"match_parent"</span>/&gt;</span><br></pre></td></tr></table></figure></fragment></p>
+<h3 id="2-通过在Activity-实例化Fragment，然后使用fragmentTransaction-add添加到containerView里"><a href="#2-通过在Activity-实例化Fragment，然后使用fragmentTransaction-add添加到containerView里" class="headerlink" title="2.  通过在Activity 实例化Fragment，然后使用fragmentTransaction.add添加到containerView里"></a>2.  通过在Activity 实例化Fragment，然后使用<code>fragmentTransaction.add</code>添加到<code>containerView</code>里</h3><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mFragment = new MyFragment()<span class="comment">;</span></span><br><span class="line">FragmentManager fragmentManager = getSupportFragmentManager()<span class="comment">;</span></span><br><span class="line">FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction()<span class="comment">;</span></span><br><span class="line">fragmentTransaction.add(R.id.containerViewId, mFragment)<span class="comment">;</span></span><br><span class="line">fragmentTransaction.commit()<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-多个fragment-动态选择显示在Activity里面"><a href="#3-多个fragment-动态选择显示在Activity里面" class="headerlink" title="3. 多个fragment 动态选择显示在Activity里面"></a>3. 多个fragment 动态选择显示在Activity里面</h3><p>在方法 二的基础上，只要使用以下代码进行Fragment的切换<br>replace这个方法，可清除所有已经添加到容器View里面的Fragment，然后再添加我们传入的Fragment。<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FragmentTransaction <span class="keyword">fragment</span>Transaction = <span class="keyword">fragment</span>Manager.beginTransaction();</span><br><span class="line"><span class="keyword">fragment</span>Transaction.replace(R.id.containerViewId, mFragment2);</span><br><span class="line"><span class="keyword">fragment</span>Transaction.commit();</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-多个Fragment通过ViewPager显示在Activity里面"><a href="#4-多个Fragment通过ViewPager显示在Activity里面" class="headerlink" title="4. 多个Fragment通过ViewPager显示在Activity里面"></a>4. 多个Fragment通过ViewPager显示在Activity里面</h3><ul>
+<li>首先需要继承 FragmentPagerAdapter 必须实现或重写其中的<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">/**</span><br><span class="line">    * Return the number of views available.   </span><br><span class="line">    */</span>   </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">int</span> <span class="title">getCount</span>(<span class="params"></span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line">    * Return the Fragment associated with a specified position.</span><br><span class="line">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> Fragment <span class="title">getItem</span>(<span class="params"><span class="keyword">int</span> position</span>)</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>然后在Activity将Adapter设置到Viewpager里面就可以了</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FragmentManager fm = getSupportFragmentManager()<span class="comment">;</span></span><br><span class="line">mAdapter = new VpAdapter(fm)<span class="comment">;</span></span><br><span class="line">mViewPager.setAdapter(mAdapter)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ViewPager和<br>  android.support.design.widget.TabLayout更配哦</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">   *  重写Adapter的这个方法，使TabLayout可以关联显示ViewPager每一页的Title</span><br><span class="line">   */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> CharSequence <span class="title">getPageTitle</span><span class="params">(<span class="keyword">int</span> position)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过以下代码关联TabLayout和ViewPager</span></span><br><span class="line">mTabLayout.setupWithViewPager(mViewPager);</span><br><span class="line">   mTabLayout.setTabsFromPagerAdapter(mAdapter);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Fragment的简单介绍"><a href="#Fragment的简单介绍" class="headerlink" title="Fragment的简单介绍"></a>Fragment的简单介绍</h2><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p><img src="http://upload-images.jianshu.io/upload_images/1181400-063dc0b2dc9f900d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Fragment必须是依存与Activity而存在的，官网这张图很好的说明了两者生命周期的关系"></p>
+<p>可以看到Fragment比Activity多了几个额外的生命周期回调方法：<br><code>onAttach(Activity)</code> 当Fragment与Activity发生关联时调用。<br><code>onCreateView(LayoutInflater, ViewGroup,Bundle)</code>创建该Fragment的视图<br><code>onActivityCreated(Bundle)</code>当Activity的onCreate方法返回时调用<br><code>onDestoryView()</code>与onCreateView相对应，当该Fragment的视图被移除时调用<br><code>onDetach()</code>与onAttach相对应，当Fragment与Activity关联被取消时调用<br>注意：除了onCreateView，其他的所有方法如果你重写了，必须调用父类对于该方法的实现</p>
+<h3 id="Fragment-常用的API"><a href="#Fragment-常用的API" class="headerlink" title="Fragment 常用的API"></a>Fragment 常用的API</h3><p>Fragment常用的三个类：<br>Fragment 主要用于定义Fragment<br>FragmentManager 主要用于在Activity中操作Fragment<br>FragmentTransaction 保证一些列Fragment操作的原子性<br><strong>主要的操作都是FragmentTransaction的方法</strong><br>FragmentTransaction transaction = fm.benginTransatcion();//开启一个事务<br><strong>transaction.add() </strong>往Activity中添加一个Fragment<br><strong>transaction.remove() </strong>从Activity中移除一个Fragment，如果被移除的Fragment没有添加到回退栈（回退栈后面会详细说），这个Fragment实例将会被销毁。<br><strong>transaction.replace()</strong>使用另一个Fragment替换当前的，实际上就是remove()然后add()的合体~<br><strong>transaction.hide()</strong>隐藏当前的Fragment，仅仅是设为不可见，并不会销毁<br><strong>transaction.show()</strong>显示之前隐藏的Fragment<br><strong>transaction.detach()</strong>会将view从UI中移除,和remove()不同,此时fragment的状态依然由FragmentManager维护。<br><strong>transaction.attach()</strong>重建view视图，附加到UI上并显示。<br><strong>transatcion.commit()</strong>提交一个事务</p>
+<h3 id="Fragment栈管理"><a href="#Fragment栈管理" class="headerlink" title="Fragment栈管理"></a>Fragment栈管理</h3><p>通过<code>FragmentTransaction.addToBackStack()</code>可以将事务添加进回退栈中(<code>back stack</code>)，这样在事务提交之后，可以从栈中再将这个事务中取出（即退按后退键可以回到原来的状态）<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FragmentManager <span class="keyword">fragment</span>Manager = getSupportFragmentManager();</span><br><span class="line">FragmentTransaction <span class="keyword">fragment</span>Transaction = <span class="keyword">fragment</span>Manager.beginTransaction();</span><br><span class="line">mFragment2 = new MainActivityFragment2();</span><br><span class="line"><span class="keyword">fragment</span>Transaction.replace(R.id.<span class="keyword">fragment</span>, mFragment2);</span><br><span class="line"><span class="keyword">fragment</span>Transaction.addToBackStack(null);</span><br><span class="line"><span class="keyword">fragment</span>Transaction.commit();</span><br></pre></td></tr></table></figure></p>
+<p>注意Fragment被remove之后View会被销毁，不管是否有添加到栈中，所以比如在Fragment中有输入一些数据，销毁后再回退回去，双重新createView则原来Fragment中的输入的数据将会丢失，这种场景下，可以使用<strong><code>transaction.hide()</code></strong>然后再<strong><code>transaction.add()</code> </strong>新的Fragment，这样才回退的时候，才能完整恢复原来的Fragment。</p>
+<h3 id="Fragment与Activity通信"><a href="#Fragment与Activity通信" class="headerlink" title="Fragment与Activity通信"></a>Fragment与Activity通信</h3><p>因为Fragment是依附于Activity的，所以通信起来并不复杂</p>
+<ol>
+<li>使用Fragment的引用（通过实例化new 出来,或者通过<code>FragmentManager.findFragmentByTag() 和 findFragmentById()</code>获取），可以通过引用直接访问所有的Fragment的public方法</li>
+<li>Fragment中可以通过getActivity()得到当前绑定的Activity的实例，然后进行操作访问Activity的所有public方法。</li>
+<li>Fragment需要Context，可以通过调用getActivity(),如果该Context需要在Activity被销毁后还存在，则使用getActivity().getApplicationContext()</li>
+</ol>
+<ul>
+<li>广播，EventBus等方法进行通信</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/26/Fragment的使用笔记/" data-id="cil3uh38c000bacew01luick9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Android自定义View开发手册" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/26/Android自定义View开发手册/" class="article-date">
+  <time datetime="2016-02-26T13:58:08.112Z" itemprop="datePublished">2016-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>边学习边总结一下安卓自定义View的方法</p>
+</blockquote>
+<h1 id="一：-基本工"><a href="#一：-基本工" class="headerlink" title="一： 基本工"></a>一： 基本工</h1><h2 id="1-首先继承View"><a href="#1-首先继承View" class="headerlink" title="1. 首先继承View"></a>1. 首先继承View</h2><p><code>public class CustomView extends View</code> 以下是关于View的一些介绍</p>
+<h3 id="重写onMeasure-int-widthMeasureSpec-int-heightMeasureSpec-方法"><a href="#重写onMeasure-int-widthMeasureSpec-int-heightMeasureSpec-方法" class="headerlink" title="重写onMeasure(int widthMeasureSpec, int heightMeasureSpec)方法"></a>重写<code>onMeasure(int widthMeasureSpec, int heightMeasureSpec)</code>方法</h3><ul>
+<li>该方法负责测量大小,如果是View则测量自己,如果是ViewGroup则测量子View和自己。<br>查看源码可以知道View的<code>onMeasure</code>方法通过<code>setMeasuredDimension(int measuredWidth, int measuredHeight)</code>方法设置控件大小，以便通过<code>getMeasuredHeight(),getMeasuredWidth()</code>获得测量的宽高。在我们重写的时候，也同样需要这样操作。</li>
+<li>通过参数<code>MeasureSpec</code>来帮助获取测量的模式和大小<ul>
+<li>参数<code>widthMeasureSpec，heightMeasureSpec</code>与 android:layout_width 和layout_height的值有关</li>
+<li>大小可以通过MeasureSpec.getSize(int measureSpec)获得 （一般情况 下，获得的大小可以直接作为setMeasuredDimension的参数，详细情况要考虑Mode）</li>
+<li>模式可以通过MeasureSpec.getMode(int measureSpec)获得 模式分为以下三种<ol>
+<li><code>MeasureSpec.UNSPECIFIED</code> 未指定模式，父View：老子才不管你，爱咋咋。一般都是父View是AdapterView，通过measure方法传入的模式。</li>
+</ol>
+<ul>
+<li><code>MeasureSpec.EXACTLY</code> 精确模式，父View：老子说多大就多大，一点都不能偏差，当设置具体值（如：50dp）或者match_parent</li>
+<li><code>MeasureSpec.AT_MOST</code> 最大模式，子View最大达到指定大小，当设置wrap_content时（这也是为什么要重写的原因，否则在View的默认实现中，wrap_content 就变成了 match_parent 铺满整个父控件 的效果了）<br><img src="http://upload-images.jianshu.io/upload_images/1181400-6954d4b6c14f58a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+</li>
+<li>综上：每个View大小的设定都事由其父View以及该View共同决定的。但这只是一个期望的大小，每个View在测量时最终大小的设定是由setMeasuredDimension()最终决定的。因此，最终确定一个View的“测量长宽“是由以下几个方面影响：<ol>
+<li>父View的MeasureSpec属性；</li>
+<li>子View的LayoutParams属性 ；</li>
+<li>setMeasuredDimension()或者其它类似设定 mMeasuredWidth 和 mMeasuredHeight 值的方法。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>参考资料：</p>
+<ul>
+<li><a href="http://yifeiyuan.me/2015/10/12/%E8%87%AA%E5%AE%9A%E4%B9%89View%E7%9A%84onMeasure%E3%80%81onLayout/" target="_blank" rel="external">自定义View的onMeasure、onLayout</a></li>
+<li><a href="http://www.jianshu.com/p/11210b14f743" target="_blank" rel="external">实践自定义UI—View</a></li>
+<li><a href="http://www.cnblogs.com/nanxiaojue/p/3536381.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external"><a href="http://www.cnblogs.com/nanxiaojue/p/3536381.html" target="_blank" rel="external">android学习——MeasureSpec介绍及使用</a></a></li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/26/Android自定义View开发手册/" data-id="cil3uh38c000cacewp5vynhjx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Android-用Canvas-画几何图形，画出小黄人" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/26/Android-用Canvas-画几何图形，画出小黄人/" class="article-date">
+  <time datetime="2016-02-26T13:58:08.109Z" itemprop="datePublished">2016-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>看了大神 <a href="http://www.jianshu.com/users/6a470d9d68a5/latest_articles" target="_blank" rel="external">JR93</a>的这篇文章:<a href="http://www.jianshu.com/p/79a0068e98c1" target="_blank" rel="external">纯CSS3画出小黄人并实现动画效果</a> ，萌生了我在安卓上画小黄人的想法，同时他在文章中的步骤分解，在我的具体实现中起到了很大的帮助。话不多说，先上效果图 </p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/1181400-ae5ef306f8a8e4b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>##实现步骤<br>其实很简单</p>
+<ol>
+<li>首先找到一张小黄人的图</li>
+</ol>
+<ul>
+<li>然后调用<code>canvas.drawBitmap()</code>后画到画布上 - -。<br>好吧，一点都不好笑</li>
+</ul>
+<hr>
+<p>正文</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>自定义<code>MinionView extends View</code>，定义以下成员变量，备用（可以先不看，后面的代码看到莫名其妙出来的变量再上来看下）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> Paint mPaint;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">float</span> bodyWidth;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">float</span> bodyHeigh;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> final <span class="keyword">float</span> BODY_SCALE = <span class="number">0.6f</span>;<span class="comment">//身体主干占整个view的比重</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> final <span class="keyword">float</span> BODY_WIDTH_HEIGHT_SCALE = <span class="number">0.6f</span>; <span class="comment">//        身体的比例设定为 w:h = 3:5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">float</span> mStrokeWidth = <span class="number">4</span>;<span class="comment">//描边宽度</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">float</span> offset;<span class="comment">//计算时，部分需要 考虑描边偏移</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">float</span> radius;<span class="comment">//身体上下半圆的半径</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> colorClothes = Color.rgb(<span class="number">32</span>, <span class="number">116</span>, <span class="number">160</span>);<span class="comment">//衣服的颜色</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> colorBody = Color.rgb(<span class="number">249</span>, <span class="number">217</span>, <span class="number">70</span>);<span class="comment">//身体的颜色</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> colorStroke = Color.BLACK;</span><br><span class="line"><span class="keyword">private</span> RectF bodyRect;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">float</span> handsHeight;<span class="comment">//计算出吊带的高度时，可以用来做手的高度</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">float</span> footHeigh;<span class="comment">//脚的高度，用来画脚部阴影时用</span></span><br></pre></td></tr></table></figure>
+<h3 id="初始化参数"><a href="#初始化参数" class="headerlink" title="初始化参数"></a>初始化参数</h3><p>重写<code>protected void onDraw(Canvas canvas)</code>方法，首先调用 如下 （会经常看到一些奇怪的数字，做比例，别问我怎么来的，目测+一点点微调得来的- -。）<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">private</span> void initParams() &#123;</span><br><span class="line">    <span class="keyword">bodyWidth </span>= Math.min(getWidth(), getHeight() * <span class="keyword">BODY_WIDTH_HEIGHT_SCALE) </span>* <span class="keyword">BODY_SCALE;</span><br><span class="line"></span>    <span class="keyword">bodyHeigh </span>= Math.min(getWidth(), getHeight() * <span class="keyword">BODY_WIDTH_HEIGHT_SCALE) </span>/ <span class="keyword">BODY_WIDTH_HEIGHT_SCALE </span>* <span class="keyword">BODY_SCALE;</span><br><span class="line"></span></span><br><span class="line">    mStrokeWidth = Math.max(<span class="keyword">bodyWidth </span>/ <span class="number">50</span>, mStrokeWidth)<span class="comment">;</span></span><br><span class="line">    offset = mStrokeWidth / <span class="number">2</span><span class="comment">;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">bodyRect </span>= new RectF()<span class="comment">;</span></span><br><span class="line">    <span class="keyword">bodyRect.left </span>= (getWidth() - <span class="keyword">bodyWidth) </span>/ <span class="number">2</span><span class="comment">;</span></span><br><span class="line">    <span class="keyword">bodyRect.top </span>= (getHeight() - <span class="keyword">bodyHeigh) </span>/ <span class="number">2</span><span class="comment">;</span></span><br><span class="line">    <span class="keyword">bodyRect.right </span>= <span class="keyword">bodyRect.left </span>+ <span class="keyword">bodyWidth;</span><br><span class="line"></span>    <span class="keyword">bodyRect.bottom </span>= <span class="keyword">bodyRect.top </span>+ <span class="keyword">bodyHeigh;</span><br><span class="line"></span></span><br><span class="line">    radius = <span class="keyword">bodyWidth </span>/ <span class="number">2</span><span class="comment">;</span></span><br><span class="line">    footHeigh = radius * <span class="number">0</span>.<span class="number">4333</span>f<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">    handsHeight =  (getHeight() + <span class="keyword">bodyHeigh) </span>/ <span class="number">2</span>   + offset - radius * <span class="number">1</span>.<span class="number">65</span>f <span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="画身体"><a href="#画身体" class="headerlink" title="画身体"></a>画身体</h3><p><img src="http://upload-images.jianshu.io/upload_images/1181400-6e21f2066317e30a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我来组成身体"><br>显然身体是一个矩形加上，上下半圆，这边只要用一个圆角矩形，然后圆角的弧度半径用身体宽度的一半就可以达到这个效果了。<br>把身体的矩形外存起来，后面经常要用到其相对位置进行对其它部位的定位，代码如下。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">	drawBody(canvas);//身体</span></span><br><span class="line"><span class="code">    drawBodyStroke(canvas);//最后画身体的描边，可以摭住一些过渡的棱角</span></span><br><span class="line"></span><br><span class="line"><span class="code">	private void drawBody(Canvas canvas) &#123;</span></span><br><span class="line"><span class="code">        initPaint();</span></span><br><span class="line"><span class="code">        mPaint.setColor(colorBody);</span></span><br><span class="line"><span class="code">        mPaint.setStyle(Paint.Style.FILL);</span></span><br><span class="line"><span class="code">        canvas.drawRoundRect(bodyRect, radius, radius, mPaint);</span></span><br><span class="line"></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">	</span></span><br><span class="line"><span class="code">	 private void drawBodyStroke(Canvas canvas) &#123;</span></span><br><span class="line"><span class="code">        initPaint();</span></span><br><span class="line"><span class="code">        mPaint.setColor(colorStroke);</span></span><br><span class="line"><span class="code">        mPaint.setStrokeWidth(mStrokeWidth);</span></span><br><span class="line"><span class="code">        mPaint.setStyle(Paint.Style.STROKE);</span></span><br><span class="line"><span class="code">        canvas.drawRoundRect(bodyRect, radius, radius, mPaint);</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">```</span> </span><br><span class="line"></span><br><span class="line"><span class="header">### 画衣服 </span></span><br><span class="line"></span><br><span class="line">![<span class="link_label">这是穿上裤子的样子</span>](<span class="link_url">http://upload-images.jianshu.io/upload_images/1181400-f4a4fa6f96bfb367.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240</span>)</span><br><span class="line"></span><br><span class="line"><span class="bullet">* </span>首先先画上底下的半圆</span><br></pre></td></tr></table></figure></p>
+<pre><code>RectF rect = new RectF();
+
+rect.left = (getWidth() - bodyWidth) / 2 + offset;
+rect.top = (getHeight() + bodyHeigh) / 2 - radius * 2 + offset;
+rect.right = rect.left + bodyWidth - offset * 2;
+rect.bottom = rect.top + radius * 2 - offset * 2;
+
+mPaint.setColor(colorClothes);
+mPaint.setStyle(Paint.Style.FILL);
+mPaint.setStrokeWidth(mStrokeWidth);
+canvas.drawArc(rect, 0, 180, true, mPaint);
+</code></pre><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>再画半圆上方的矩形,w表示矩形离左边身体的距离，h矩形的高</span><br></pre></td></tr></table></figure>
+<pre><code>int h = (int) (radius * 0.5);
+int w = (int) (radius * 0.3);
+
+rect.left += w;
+rect.top = rect.top + radius - h;
+rect.right -= w;
+rect.bottom = rect.top + h;
+
+canvas.drawRect(rect, mPaint);
+</code></pre><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 上面的画完之后，要在衣服上面描一层黑色的边，用<span class="escape">`c</span>anvas.drawLines<span class="escape">`把</span>线一条条画出来吧，这边要同时考虑画笔的描边宽度，否则会出现连接点有锯齿的感觉。</span><br></pre></td></tr></table></figure>
+<pre><code>//画横线
+initPaint();
+mPaint.setColor(colorStroke);
+mPaint.setStyle(Paint.Style.FILL);
+mPaint.setStrokeWidth(mStrokeWidth);
+float[] pts = new float[20];//5条线
+
+pts[0] = rect.left - w;
+pts[1] = rect.top + h;
+pts[2] = pts[0] + w;
+pts[3] = pts[1];
+
+pts[4] = pts[2];
+pts[5] = pts[3] + offset;
+pts[6] = pts[4];
+pts[7] = pts[3] - h;
+
+pts[8] = pts[6] - offset;
+pts[9] = pts[7];
+pts[10] = pts[8] + (radius - w) * 2;
+pts[11] = pts[9];
+
+pts[12] = pts[10];
+pts[13] = pts[11] - offset;
+pts[14] = pts[12];
+pts[15] = pts[13] + h;
+
+pts[16] = pts[14] - offset;
+pts[17] = pts[15];
+pts[18] = pts[16] + w;
+pts[19] = pts[17];
+canvas.drawLines(pts, mPaint);
+</code></pre><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 画吊带 就是一个直角梯形，把梯形的四个顶点计算出来，使用<span class="escape">`c</span>anvas.drawPath<span class="escape">`将</span>其画上去，然后纽扣用一个实心的小圆表示</span><br></pre></td></tr></table></figure>
+<pre><code>//画左吊带
+ initPaint();
+ mPaint.setColor(colorClothes);
+ mPaint.setStrokeWidth(mStrokeWidth);
+ mPaint.setStyle(Paint.Style.FILL);
+ Path path = new Path();
+ path.moveTo(rect.left - w - offset, handsHeight);
+ path.lineTo(rect.left + h / 4, rect.top + h / 2);
+ final float smallW = w / 2 * (float) Math.sin(Math.PI / 4);
+ path.lineTo(rect.left + h / 4 + smallW, rect.top + h / 2 - smallW);
+ final float smallW2 = w / (float) Math.sin(Math.PI / 4) / 2;
+ path.lineTo(rect.left - w - offset, handsHeight - smallW2);
+
+ canvas.drawPath(path, mPaint);
+ initPaint();
+ mPaint.setColor(colorStroke);
+ mPaint.setStrokeWidth(mStrokeWidth);
+ mPaint.setStyle(Paint.Style.STROKE);
+ canvas.drawPath(path, mPaint);
+ initPaint();
+ mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+ canvas.drawCircle(rect.left + h / 4, rect.top + h / 4, mStrokeWidth, mPaint);
+
+ //画右吊带
+
+ initPaint();
+ mPaint.setColor(colorClothes);
+ mPaint.setStrokeWidth(mStrokeWidth);
+ mPaint.setStyle(Paint.Style.FILL);
+ path.reset();
+ path.moveTo(rect.left - w + 2 * radius - offset, handsHeight);
+ path.lineTo(rect.right - h / 4, rect.top + h / 2);
+ path.lineTo(rect.right - h / 4 - smallW, rect.top + h / 2 - smallW);
+ path.lineTo(rect.left - w + 2 * radius - offset, handsHeight- smallW2);
+
+ canvas.drawPath(path, mPaint);
+ initPaint();
+ mPaint.setColor(colorStroke);
+ mPaint.setStrokeWidth(mStrokeWidth);
+ mPaint.setStyle(Paint.Style.STROKE);
+ canvas.drawPath(path, mPaint);
+ initPaint();
+ mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+ canvas.drawCircle(rect.right - h / 4, rect.top + h / 4, mStrokeWidth, mPaint);
+</code></pre><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 画中间的口袋 是一个下面两边是圆角的圆角矩形，但是貌似不能直接画这样的圆角矩形，所以我就用土办法，不就是一个多边形吗，用<span class="escape">`c</span>anvas.drawPath<span class="escape">`来</span>画，在圆角的地方添加圆弧过渡<span class="escape">`p</span>ath.addArc`</span><br></pre></td></tr></table></figure>
+<pre><code>//中间口袋
+ initPaint();
+ mPaint.setColor(colorStroke);
+ mPaint.setStrokeWidth(mStrokeWidth);
+ mPaint.setStyle(Paint.Style.STROKE);
+
+ path.reset();
+ float radiusBigPokect = w / 2.0f;
+ path.moveTo(rect.left + 1.5f * w, rect.bottom - h / 4);
+ path.lineTo(rect.right - 1.5f * w, rect.bottom - h / 4);
+ path.lineTo(rect.right - 1.5f * w, rect.bottom + h / 4);
+ path.addArc(rect.right - 1.5f * w - radiusBigPokect * 2, rect.bottom + h / 4 - radiusBigPokect,
+         rect.right - 1.5f * w, rect.bottom + h / 4 + radiusBigPokect, 0, 90);
+ path.lineTo(rect.left + 1.5f * w + radiusBigPokect, rect.bottom + h / 4 + radiusBigPokect);
+
+ path.addArc(rect.left + 1.5f * w, rect.bottom + h / 4 - radiusBigPokect,
+         rect.left + 1.5f * w + 2 * radiusBigPokect, rect.bottom + h / 4 + radiusBigPokect, 90, 90);
+ path.lineTo(rect.left + 1.5f * w, rect.bottom - h / 4 - offset);
+ canvas.drawPath(path, mPaint);
+</code></pre><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>左右两个小口袋也直接用一个小弧来解决掉</span><br></pre></td></tr></table></figure>
+<pre><code>//        下边一竖，分开裤子
+   canvas.drawLine(bodyRect.left + bodyWidth / 2, bodyRect.bottom - h * 0.8f, bodyRect.left + bodyWidth / 2, bodyRect.bottom, mPaint);
+</code></pre><p>//      左边的小口袋<br>        float radiusSamllPokect = w * 1.2f;<br>        canvas.drawArc(bodyRect.left - radiusSamllPokect, bodyRect.bottom - radius - radiusSamllPokect,<br>                bodyRect.left + radiusSamllPokect, bodyRect.bottom - radius + radiusSamllPokect, 80, -60, false, mPaint);<br>//      右边小口袋<br>        canvas.drawArc(bodyRect.right - radiusSamllPokect, bodyRect.bottom - radius - radiusSamllPokect,<br>                bodyRect.right + radiusSamllPokect, bodyRect.bottom - radius + radiusSamllPokect, 100, 60, false, mPaint);<br>//        canvas.drawArc(left + w/5,);<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">* </span>嗯，衣服画完了。</span><br></pre></td></tr></table></figure></p>
+<pre><code>drawClothes(canvas);//衣服
+
+private void drawClothes(Canvas canvas) {
+    initPaint();
+    //就是上面那一堆代码按顺序合起来啦。。。。。
+}
+</code></pre><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="header">### 画脚</span></span><br><span class="line"></span><br><span class="line">![<span class="link_label">萌萌的小短腿</span>](<span class="link_url">http://upload-images.jianshu.io/upload_images/1181400-2b39eab8cbfca553.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240</span>)</span><br><span class="line">脚这部分比较简单，从身体的下方，一个竖直的矩形下来，再加上一个左边圆角的圆角矩形，还是通过画Path来实现。</span><br></pre></td></tr></table></figure>
+<pre><code>    drawFeet(canvas);//脚
+
+private void drawFeet(Canvas canvas) {
+    mPaint.setStrokeWidth(mStrokeWidth);
+    mPaint.setColor(colorStroke);
+    mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+
+    float radiusFoot = radius / 3 * 0.4f;
+    float leftFootStartX = bodyRect.left + radius - offset * 2;
+    float leftFootStartY = bodyRect.bottom - offset;
+    float footWidthA = radius * 0.5f;//脚宽度大-到半圆结束
+    float footWidthB = footWidthA / 3;//脚宽度-比较细的部分
+
+    //      左脚
+    Path path = new Path();
+    path.moveTo(leftFootStartX, leftFootStartY);
+    path.lineTo(leftFootStartX, leftFootStartY + footHeigh);
+    path.lineTo(leftFootStartX - footWidthA + radiusFoot, leftFootStartY + footHeigh);
+
+    RectF rectF = new RectF();
+    rectF.left = leftFootStartX - footWidthA;
+    rectF.top = leftFootStartY + footHeigh - radiusFoot * 2;
+    rectF.right = rectF.left + radiusFoot * 2;
+    rectF.bottom = rectF.top + radiusFoot * 2;
+    path.addArc(rectF, 90, 180);
+    path.lineTo(rectF.left + radiusFoot + footWidthB, rectF.top);
+    path.lineTo(rectF.left + radiusFoot + footWidthB, leftFootStartY);
+    path.lineTo(leftFootStartX, leftFootStartY);
+    canvas.drawPath(path, mPaint);
+</code></pre><p>//      右脚<br>        float rightFootStartX = bodyRect.left + radius + offset * 2;<br>        float rightFootStartY = leftFootStartY;<br>        path.reset();<br>        path.moveTo(rightFootStartX, rightFootStartY);<br>        path.lineTo(rightFootStartX, rightFootStartY + footHeigh);<br>        path.lineTo(rightFootStartX + footWidthA - radiusFoot, rightFootStartY + footHeigh);</p>
+<pre><code>    rectF.left = rightFootStartX + footWidthA - radiusFoot * 2;
+    rectF.top = rightFootStartY + footHeigh - radiusFoot * 2;
+    rectF.right = rectF.left + radiusFoot * 2;
+    rectF.bottom = rectF.top + radiusFoot * 2;
+    path.addArc(rectF, 90, -180);
+    path.lineTo(rectF.right - radiusFoot - footWidthB, rectF.top);
+    path.lineTo(rectF.right - radiusFoot - footWidthB, rightFootStartY);
+    path.lineTo(rightFootStartX, rightFootStartY);
+    canvas.drawPath(path, mPaint);
+
+
+}
+</code></pre><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="header">### 画手</span></span><br><span class="line"></span><br><span class="line">![<span class="link_label">这里是双手放在后背的样子</span>](<span class="link_url">http://upload-images.jianshu.io/upload_images/1181400-52c8633170e3d1b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240</span>)</span><br><span class="line"></span><br><span class="line">手我用的是一个等腰直角三角形来实现，斜边就是吊带到裤子，从直角顶点作高到斜边，通过小直角三角形的直角边相等就可以算出顶点的坐标。这个时候还是有个圆角，刚开始我实现的时候是像上面那些通过<span class="code">` path.addArc`</span>加上圆角，但是这边计算好之后和原来的衔接一直有问题，在调了半天之后，偶然发现<span class="code">`mPaint.setPathEffect(new CornerPathEffect(radiusHand));`</span>这个方法，可以使path的拐角用圆角来过渡，一下子就简单到爆了，果然科学技术是第一生产力。</span><br></pre></td></tr></table></figure>
+<pre><code>    drawHands(canvas);//手
+
+private void drawHands(Canvas canvas) {
+    mPaint.setStrokeWidth(mStrokeWidth);
+    mPaint.setStyle(Paint.Style.FILL);
+    mPaint.setColor(colorBody);
+</code></pre><p>//        左手<br>        Path path = new Path();<br>        float hypotenuse = bodyRect.bottom - radius - handsHeight;<br>        float radiusHand = hypotenuse / 6;<br>        mPaint.setPathEffect(new CornerPathEffect(radiusHand));</p>
+<pre><code>path.moveTo(bodyRect.left, handsHeight);
+path.lineTo(bodyRect.left - hypotenuse / 2, handsHeight + hypotenuse / 2);
+path.lineTo(bodyRect.left, bodyRect.bottom - radius);
+canvas.drawPath(path, mPaint);
+
+mPaint.setStrokeWidth(mStrokeWidth);
+mPaint.setStyle(Paint.Style.STROKE);
+mPaint.setColor(colorStroke);
+canvas.drawPath(path, mPaint);
+</code></pre><p>//        右手<br>        path.reset();<br>        mPaint.setStyle(Paint.Style.FILL);<br>        mPaint.setColor(colorBody);</p>
+<pre><code>path.moveTo(bodyRect.right, handsHeight);
+path.lineTo(bodyRect.right + hypotenuse / 2, handsHeight + hypotenuse / 2);
+path.lineTo(bodyRect.right, bodyRect.bottom - radius);
+canvas.drawPath(path, mPaint);
+
+mPaint.setStrokeWidth(mStrokeWidth);
+mPaint.setStyle(Paint.Style.STROKE);
+mPaint.setColor(colorStroke);
+canvas.drawPath(path, mPaint);
+</code></pre><p>//        一个慢动作  - -||| 拐点内侧<br>        path.reset();<br>        mPaint.setStyle(Paint.Style.FILL);<br>        path.moveTo(bodyRect.left, handsHeight + hypotenuse / 2 - mStrokeWidth);<br>        path.lineTo(bodyRect.left - mStrokeWidth <em> 2, handsHeight + hypotenuse / 2 + mStrokeWidth </em> 2);<br>        path.lineTo(bodyRect.left, handsHeight + hypotenuse / 2 + mStrokeWidth);<br>        canvas.drawPath(path, mPaint);</p>
+<pre><code>    path.reset();
+    path.moveTo(bodyRect.right, handsHeight + hypotenuse / 2 - mStrokeWidth);
+    path.lineTo(bodyRect.right + mStrokeWidth * 2, handsHeight + hypotenuse / 2 + mStrokeWidth * 2);
+    path.lineTo(bodyRect.right, handsHeight + hypotenuse / 2 + mStrokeWidth);
+    canvas.drawPath(path, mPaint);
+
+}
+</code></pre><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="header">### 画眼睛,嘴巴</span></span><br><span class="line"></span><br><span class="line">![<span class="link_label">三个字，圆圆圆</span>](<span class="link_url">http://upload-images.jianshu.io/upload_images/1181400-602e4db429c5a8ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240</span>)</span><br><span class="line"></span><br><span class="line">反正就是各种画圆，或者弧形，嘴巴部分偷懒也就一条小弧一笔带过了，哈哈</span><br></pre></td></tr></table></figure>
+<pre><code>drawEyesMouth(canvas);//眼睛,嘴巴
+</code></pre><p>private void drawEyesMouth(Canvas canvas) {</p>
+<pre><code>float eyesOffset = radius * 0.1f;//眼睛中心处于上半圆直径 往上的高度偏移
+mPaint.setStrokeWidth(mStrokeWidth * 5);
+</code></pre><p>//        计算眼镜带弧行的半径 分两段，以便眼睛中间有隔开的效果<br>        float radiusGlassesRibbon = (float) (radius / Math.sin(Math.PI / 20));<br>        RectF rect = new RectF();<br>        rect.left = bodyRect.left + radius - radiusGlassesRibbon;<br>        rect.top = bodyRect.top + radius - (float) (radius / Math.tan(Math.PI / 20)) - radiusGlassesRibbon - eyesOffset;<br>        rect.right = rect.left + radiusGlassesRibbon <em> 2;<br>        rect.bottom = rect.top + radiusGlassesRibbon </em> 2;<br>        canvas.drawArc(rect, 81, 3, false, mPaint);<br>        canvas.drawArc(rect, 99, -3, false, mPaint);</p>
+<p>//眼睛半径<br>        float radiusEyes = radius / 3;<br>        initPaint();<br>        mPaint.setColor(Color.WHITE);<br>        mPaint.setStrokeWidth(mStrokeWidth);<br>        mPaint.setStyle(Paint.Style.FILL);</p>
+<pre><code>canvas.drawCircle(bodyRect.left + bodyWidth / 2 - radiusEyes - offset, bodyRect.top + radius - eyesOffset, radiusEyes, mPaint);
+canvas.drawCircle(bodyRect.left + bodyWidth / 2 + radiusEyes + offset, bodyRect.top + radius - eyesOffset, radiusEyes, mPaint);
+
+mPaint.setColor(colorStroke);
+mPaint.setStyle(Paint.Style.STROKE);
+canvas.drawCircle(bodyRect.left + bodyWidth / 2 - radiusEyes - offset, bodyRect.top + radius - eyesOffset, radiusEyes, mPaint);
+canvas.drawCircle(bodyRect.left + bodyWidth / 2 + radiusEyes + offset, bodyRect.top + radius - eyesOffset, radiusEyes, mPaint);
+
+final float radiusEyeballBlack = radiusEyes / 3;
+mPaint.setStyle(Paint.Style.FILL);
+canvas.drawCircle(bodyRect.left + bodyWidth / 2 - radiusEyes - offset, bodyRect.top + radius - eyesOffset, radiusEyeballBlack, mPaint);
+canvas.drawCircle(bodyRect.left + bodyWidth / 2 + radiusEyes + offset, bodyRect.top + radius - eyesOffset, radiusEyeballBlack, mPaint);
+
+mPaint.setColor(Color.WHITE);
+final float radiusEyeballWhite = radiusEyeballBlack / 2;
+canvas.drawCircle(bodyRect.left + bodyWidth / 2 - radiusEyes + radiusEyeballWhite - offset * 2,
+        bodyRect.top + radius - radiusEyeballWhite + offset - eyesOffset,
+        radiusEyeballWhite, mPaint);
+canvas.drawCircle(bodyRect.left + bodyWidth / 2 + radiusEyes + radiusEyeballWhite,
+        bodyRect.top + radius - radiusEyeballWhite + offset - eyesOffset,
+        radiusEyeballWhite, mPaint);
+</code></pre><p>//        画嘴巴，因为位置和眼睛有相对关系，所以写在一块<br>        mPaint.setColor(colorStroke);<br>        mPaint.setStyle(Paint.Style.STROKE);<br>        mPaint.setStrokeWidth(mStrokeWidth);<br>        float radiusMonth = radius;<br>        rect.left = bodyRect.left;<br>        rect.top = bodyRect.top - radiusMonth / 2.5f;<br>        rect.right = rect.left + radiusMonth <em> 2;<br>        rect.bottom = rect.top + radiusMonth </em> 2;<br>        canvas.drawArc(rect, 95, -20, false, mPaint);</p>
+<pre><code>}
+</code></pre><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="header">### 脚下的阴影</span></span><br><span class="line">这是最后一步了，直接画一个非常扁的椭圆放在脚下面就可以了</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">![<span class="link_label">不科学啊，长这么胖，为毛影子这么瘦（别在意这些细节）</span>](<span class="link_url">http://upload-images.jianshu.io/upload_images/1181400-529067b20095a158.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>    drawFeetShadow(canvas);//脚下的阴影
+
+private void drawFeetShadow(Canvas canvas) {
+
+    mPaint.setColor(getResources().getColor(android.R.color.darker_gray));
+    canvas.drawOval(bodyRect.left + bodyWidth * 0.15f, bodyRect.bottom - offset + footHeigh,
+            bodyRect.right - bodyWidth * 0.15f, bodyRect.bottom - offset + footHeigh + mStrokeWidth * 1.3f, mPaint);
+}
+</code></pre><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 在<span class="escape">`o</span>nDraw<span class="escape">`方</span>法，依次调用上述的各种方法，画完收工。</span><br></pre></td></tr></table></figure>
+<pre><code>@Override
+protected void onDraw(Canvas canvas) {
+    initParams();
+    initPaint();
+    drawFeetShadow(canvas);//脚下的阴影
+    drawFeet(canvas);//脚
+    drawHands(canvas);//手
+    drawBody(canvas);//身体
+    drawClothes(canvas);//衣服
+    drawEyesMouth(canvas);//眼睛,嘴巴
+    drawBodyStroke(canvas);//最后画身体的描边，可以摭住一些过渡的棱角
+}
+</code></pre><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 画完了，好像少了点什么。。。。。对了，头发。好吧，我画的是程序猿，哪来的头发 - -，</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">&gt;至此，正常画风的小黄人已经画完了，但是吧，好不容易画好，好像没啥意思，脑洞大开一下吧。</span><br><span class="line">电影中的小黄人中病毒后是会变成紫色的，那我们用代码画，换个颜色还不是分分钟，不但要紫色，还要各种颜色。</span><br><span class="line"></span><br><span class="line"><span class="comment">### 三行代码搞定脑洞</span></span><br></pre></td></tr></table></figure>
+<pre><code>public void randomBodyColor() {
+    Random random = new Random();
+    colorBody = Color.rgb(random.nextInt(255), random.nextInt(255), random.nextInt(255));
+    invalidate();
+}
+</code></pre><p>```<br>然后效果就变成了这样。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1181400-a197153a3fe0120f.gif?imageMogr2/auto-orient/strip" alt="看起来还有点小酷炫"></p>
+<blockquote>
+<p>希望大家喜欢 ,上述有任何问题或者表述不清楚的，欢迎评论交流。<br>完整源码 <a href="https://github.com/samwangds/minions" target="_blank" rel="external">github</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/26/Android-用Canvas-画几何图形，画出小黄人/" data-id="cil3uh38c000dacewbq3c962o" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">14</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/02/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/26/程序猿的三行情书-/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/26/安卓通过设置View的OnTouchListener超简单实现点击动画效果/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/26/如何通过Monkey解放双手咻一咻/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/26/win10-android-studio-Terminal无法输入/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

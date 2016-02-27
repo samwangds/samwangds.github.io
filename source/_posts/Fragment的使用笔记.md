@@ -1,3 +1,6 @@
+title: Fragment的使用笔记
+---
+
 >使用v4包里的Fragment与android.app.Fragment的差别在于：
 1. v4包的兼容支持3.0以下版本
 2. v4包的Activity必须继承自`android.support.v4.app.FragmentActivity`

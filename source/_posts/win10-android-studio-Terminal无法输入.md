@@ -1,3 +1,5 @@
+title: win10-android-studio-Terminal无法输入
+---
 1. win R -> 输入 cmd 回车 ，打开命令行界面
 2. 在标题栏上右键，属性
 3. 勾选使用旧版控制台

@@ -1,3 +1,5 @@
+title: android-开发Tips---sdk-api
+---
 收集网上看到，或者自己总结的tips 
 1. `view.isShown ()` 当view本身以及它的所有祖先们都是visible时，isShown（）才返回TRUE。
 而平常我们调用`if(view.getVisibility() == View.VISIBLE)`只是对view本身而不对祖先的可见性进行判断
