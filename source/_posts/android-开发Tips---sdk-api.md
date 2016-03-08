@@ -1,4 +1,6 @@
 title: android-开发Tips---sdk-api
+date: 2015.11.20 19:04
+categories: Android-笔记
 ---
 收集网上看到，或者自己总结的tips 
 1. `view.isShown ()` 当view本身以及它的所有祖先们都是visible时，isShown（）才返回TRUE。

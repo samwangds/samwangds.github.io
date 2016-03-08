@@ -1,4 +1,6 @@
 title: 安卓通过设置View的OnTouchListener超简单实现点击动画效果
+date: 2015.12.25 17:56
+categories: Android-笔记
 ---
 ![效果展示](http://upload-images.jianshu.io/upload_images/1181400-de634b59356a54f5.gif?imageMogr2/auto-orient/strip)
 

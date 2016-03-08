@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Sam's blog
-subtitle:
-description:
+title: 山言两语
+subtitle: Sam's blog
+description: 一个菜逼的安卓之旅
 author: Sam Wang
-language:
+language: zh
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://isam.wang
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -65,6 +65,8 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: pacman
 
+# 多说评论
+duoshuo_shortname: samwang
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:

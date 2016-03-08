@@ -1,4 +1,6 @@
 title: Android-用Canvas-画几何图形，画出小黄人
+date: 2016.01.20 19:04 
+categories: Android-笔记
 ---
 >看了大神 [JR93](http://www.jianshu.com/users/6a470d9d68a5/latest_articles)的这篇文章:[纯CSS3画出小黄人并实现动画效果](http://www.jianshu.com/p/79a0068e98c1) ，萌生了我在安卓上画小黄人的想法，同时他在文章中的步骤分解，在我的具体实现中起到了很大的帮助。话不多说，先上效果图 
 

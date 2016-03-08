@@ -1,4 +1,6 @@
 title: adb-命令
+date: 2015.11.13 18:54
+categories: Android-笔记
 ---
 #模拟应用程序被杀掉
 
