@@ -1,6 +1,11 @@
 title: Android-Studio-Tips
 date: 2016.01.22 17:52
 categories: Android-笔记
+tags: 
+- android
+- tips
+- android studio
+- 安卓技巧
 ---
 >收集网上看到，或者自己总结的tips，未完待续，持续更新 
 文中所提到的快捷键无特殊说明均为windows环境下，如果遇到快捷键无效，检查是否被占用，或者设置中，keymap相关键位是否设置

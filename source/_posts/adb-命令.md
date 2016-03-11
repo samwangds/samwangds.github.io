@@ -1,6 +1,10 @@
 title: adb-命令
 date: 2015.11.13 18:54
 categories: Android-笔记
+tags:
+- adb
+- cmd
+- sdk
 ---
 #模拟应用程序被杀掉
 

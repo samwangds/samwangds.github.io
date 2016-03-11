@@ -1,6 +1,10 @@
 title: monkey-test-使用笔记
 date: 2016.02.04 11:33
 categories: Android-笔记
+tags:
+- android
+- monkey test
+- 自动化测试
 ---
 > Monkey 测试是一种安卓自动化测试，可以用Monkey随机、多次模拟事件来测试应用的负荷程度，并从中获取出错信息，从而优化应用。
 

@@ -1,6 +1,9 @@
 title: Fragment的使用笔记
 date: 2016.01.17 13:05
 categories: Android-笔记
+tags:
+- android
+- Fragment
 ---
 
 >使用v4包里的Fragment与android.app.Fragment的差别在于：
